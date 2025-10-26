@@ -29,17 +29,16 @@ body {
 
 /* Header Styles */
 .main-header {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-color: #fff;
 }
 
 .header-top {
     background-color: var(--guinness-black);
     color: #fff;
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
 .header-top .container {
@@ -48,73 +47,111 @@ body {
     align-items: center;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .btn-tickets {
-    background-color: var(--primary-red);
-    color: #fff;
+    background-color: var(--guinness-gold);
+    color: #000;
     border: none;
     padding: 10px 20px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .btn-tickets:hover {
-    background-color: #9a1629;
+    background-color: #d4b76f;
 }
 
 .my-booking {
     color: #fff;
     text-decoration: none;
     transition: opacity 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .my-booking:hover {
     opacity: 0.8;
 }
 
+.main-nav {
+    background-color: #fff;
+    padding: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
 .main-nav .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     padding: 15px 20px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .logo img {
-    height: 50px;
+    height: 40px;
     width: auto;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo-25 {
+    color: var(--guinness-gold);
+    font-size: 1.5rem;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 40px;
+    align-items: center;
 }
 
 .nav-menu a {
     text-decoration: none;
     color: var(--text-dark);
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s ease;
     position: relative;
+    font-size: 0.95rem;
+}
+
+.nav-menu a i {
+    font-size: 0.7rem;
+    margin-left: 5px;
 }
 
 .nav-menu a::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -15px;
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--guinness-gold);
+    background-color: var(--text-dark);
     transition: width 0.3s ease;
 }
 
-.nav-menu a:hover::after {
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
     width: 100%;
 }
 
 .nav-menu a:hover {
-    color: var(--primary-red);
+    color: var(--text-dark);
 }
 
 .mobile-menu-toggle {
@@ -129,60 +166,70 @@ body {
 .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
-    background-color: var(--text-dark);
+    background-color: #fff;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
                 url('https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=2000') center/cover;
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     color: #fff;
-    padding: 60px 20px;
+    padding: 80px 60px;
     position: relative;
 }
 
 .hero-content {
     animation: fadeInUp 1s ease-out;
+    max-width: 800px;
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 900;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 40px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+}
+
+.hero-cta {
+    margin-top: 40px;
 }
 
 .hero-date-selector {
-    margin-top: 40px;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
     display: flex;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    padding: 25px 35px;
+    border-radius: 8px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hero-date-selector input[type="date"] {
-    padding: 10px 15px;
-    border: 2px solid var(--guinness-black);
+    padding: 12px 20px;
+    border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    font-family: inherit;
 }
 
 .btn-primary {
@@ -593,4 +640,373 @@ html {
         padding: 12px 25px;
         font-size: 0.9rem;
     }
+}
+
+/* Visit Page Styles */
+.visit-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=2000') center/cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 60px;
+    color: #fff;
+}
+
+.visit-hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.visit-hero h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    max-width: 800px;
+}
+
+.quick-nav {
+    background-color: var(--guinness-black);
+    padding: 20px 0;
+}
+
+.quick-nav-items {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quick-nav-items a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.quick-nav-items a:hover {
+    color: var(--guinness-gold);
+}
+
+.visit-main-section {
+    background-color: #fff;
+    padding: 100px 60px;
+}
+
+.visit-main-section h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.visit-main-section > p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+}
+
+.experience-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--guinness-black);
+}
+
+.feature-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.gravity-section {
+    background-color: var(--guinness-cream);
+    padding: 100px 60px;
+}
+
+.gravity-content h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.gravity-content h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--guinness-gold);
+    margin-bottom: 30px;
+}
+
+.gravity-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin-bottom: 30px;
+}
+
+.add-magic-section {
+    background-color: #fff;
+    padding: 100px 60px;
+}
+
+.add-magic-section h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.add-magic-section > p {
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+    max-width: 800px;
+}
+
+.magic-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.magic-card {
+    background: #fff;
+    padding: 50px 40px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.magic-card:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.magic-card h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.magic-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.elevate-section {
+    background-color: var(--guinness-cream);
+    padding: 100px 60px;
+}
+
+.elevate-section h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.elevate-section > p {
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+    max-width: 800px;
+}
+
+.elevate-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.elevate-card {
+    background: #fff;
+    padding: 50px 40px;
+    border: 1px solid #e0e0e0;
+}
+
+.elevate-card h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.elevate-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Eat & Drink Page Styles */
+.eat-drink-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=2000') center/cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 60px;
+    color: #fff;
+}
+
+.eat-drink-hero h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.eat-drink-hero h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-width: 800px;
+}
+
+.restaurant-tabs {
+    background-color: var(--guinness-black);
+    padding: 20px 0;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    border-bottom-color: var(--guinness-gold);
+}
+
+.dining-section {
+    background-color: #fff;
+    padding: 80px 60px;
+}
+
+.dining-content h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.dining-content > p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 900px;
+}
+
+.tab-content-section {
+    background-color: var(--guinness-cream);
+    padding: 60px 60px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.restaurant-detail {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.restaurant-detail h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.restaurant-detail .subtitle {
+    color: var(--primary-red);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.restaurant-detail p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.cook-section {
+    background-color: #fff;
+    padding: 100px 60px;
+    text-align: center;
+}
+
+.cook-section h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.cook-section h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--text-light);
+}
+
+.cook-section > p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.discover-experiences {
+    background-color: var(--guinness-black);
+    color: #fff;
+    padding: 100px 60px;
+}
+
+.discover-experiences h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.discover-experiences > p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin-bottom: 60px;
+}
+
+.experience-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.exp-link {
+    text-align: center;
+}
+
+.exp-link .distance {
+    display: block;
+    color: var(--guinness-gold);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.exp-link h4 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
 }
