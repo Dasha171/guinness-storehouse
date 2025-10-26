@@ -1010,3 +1010,178 @@ html {
     font-weight: 900;
     margin-bottom: 20px;
 }
+
+/* Shop Page Styles */
+.shop-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=2000') center/cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 60px;
+    color: #fff;
+}
+
+.shop-hero h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.shop-hero > p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.shop-categories {
+    background-color: #fff;
+    padding: 100px 60px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.category-item {
+    text-align: center;
+    padding: 40px 30px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.category-item:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.category-item h3 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: var(--guinness-black);
+}
+
+.category-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.special-collection {
+    background-color: var(--guinness-cream);
+    padding: 100px 60px;
+    text-align: center;
+}
+
+.special-collection h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.special-collection > p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+/* Discover Page Styles */
+.discover-hero {
+    background-color: var(--guinness-black);
+    color: #fff;
+    padding: 100px 60px;
+}
+
+.discover-hero h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.discover-hero h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.discover-hero > p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 900px;
+}
+
+.discover-experiences-grid {
+    background-color: #fff;
+    padding: 60px 60px;
+}
+
+.experience-card-large {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 60px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.experience-card-large:hover {
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.card-image {
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.card-content {
+    background-color: #fff;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-content .distance {
+    color: var(--guinness-gold);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.card-content h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.card-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.story-section {
+    background-color: var(--guinness-cream);
+    padding: 100px 60px;
+    text-align: center;
+}
+
+.story-section h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.story-section > p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 0 auto;
+}
